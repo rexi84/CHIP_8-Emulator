@@ -1,10 +1,10 @@
-# CHIP-8 Emulator in C 👾
+# CHIP-8 Emulator in C
 
 A fully functional, accurate CHIP-8 emulator written in C using the [Raylib](https://www.raylib.com/) library. 
 
 This project accurately emulates the original CHIP-8 instruction set, featuring a fixed-timestep execution loop, procedural sound generation, and support for historical hardware quirks.
 
-## ✨ Features
+## Features
 
 * **Complete Instruction Set:** Implements all 34 standard CHIP-8 opcodes accurately.
 * **Procedural Audio:** Generates the classic CHIP-8 "beep" using a procedurally generated square wave (no external `.wav` files required).
@@ -12,7 +12,7 @@ This project accurately emulates the original CHIP-8 instruction set, featuring 
 * **Historical Accuracy (Quirks):** Includes a toggle for original COSMAC VIP (1977) behaviors (e.g., bit shifting and memory index increments), making it highly compatible with older ROMs.
 * **QWERTZ Layout:** Key mappings are optimized for central European QWERTZ keyboards.
 
-## 🎮 Controls
+## Controls
 
 The original CHIP-8 utilized a 16-key hexadecimal keypad (0-F). This emulator maps them to the left side of a modern QWERTZ keyboard:
 
@@ -23,7 +23,7 @@ The original CHIP-8 utilized a 16-key hexadecimal keypad (0-F). This emulator ma
 | `7` `8` `9` `E` | `A` `S` `D` `F` |
 | `A` `0` `B` `F` | `Y` `X` `C` `V` |
 
-## 🛠️ Configuration
+## Configuration
 
 You can easily tweak the emulator's behavior by modifying the global variables at the top of `main.c`:
 
@@ -33,7 +33,7 @@ You can easily tweak the emulator's behavior by modifying the global variables a
 * `beep_frequency`: Changes the pitch of the procedural sound (default: `440` Hz).
 * `PIXEL_SCALE`: Adjusts the window size (default: `10`, making the 64x32 display 640x320 pixels).
 
-## 🚀 Building from Source
+## Building from Source
 
 ### Prerequisites
 * A standard C compiler (GCC, Clang, or MSVC)
@@ -47,5 +47,5 @@ gcc main.c -o chip8.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 ```
 *(Note: Linker flags may vary depending on your operating system).*
 
-## 📂 Usage
+## Usage
 Place your target CHIP-8 ROM in the same directory as the executable, rename it to `rom.ch8` (or change the `rom_name` variable in the code), and launch the application!
