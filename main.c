@@ -30,7 +30,7 @@ void draw();
 bool LoadROM(const char* filename);
 void EmulateCycle();
 void UpdateKeys();
-void GenerateBeep();
+void GenerateBeep(void* buffer, unsigned int frames);
 void Op00E0();
 void Op1NNN();
 void Op6XNN();
@@ -192,7 +192,7 @@ void draw() {
 		// ZDE OPRAVENO NA CHIP8_WIDTH
 		for (int x = 0; x < CHIP8_WIDTH; x++) {
 
-			// Zápis musí být striktnì [y][x]
+			// ZÃ¡pis musÃ­ bÃ½t striktnÃ¬ [y][x]
 			if (display[y][x] == true) {
 				DrawRectangle(x * PIXEL_SCALE, y * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE, WHITE);
 			}
